@@ -40,6 +40,13 @@ mongoose.connection
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
+// Controllers
+const customersController = require('./controllers/customers')
+app.use('/customers', customersController)
+
+const invoicesController = require('./controllers/invoices')
+app.use('/invoices', invoicesController)
+
 
 /////////////////////////////
 // LISTENER
