@@ -10,6 +10,6 @@ const invoiceSchema = new Schema(
     {timestamps: true}
 )
 
-const Customer = mongoose.model('Customer', customerSchema)
+const Invoice = mongoose.model('Invoice', invoiceSchema)
 
-module.exports = Customer
+module.exports = Invoice
