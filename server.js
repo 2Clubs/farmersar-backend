@@ -4,7 +4,7 @@
 // .env variables
 require('dotenv').config()
 // pull PORT from .env; default of 4000
-const { PORT = 4000 } = process.env
+const { PORT = 4000, MONGODB_URL } = process.env
 // import express
 const express = require('express')
 // create express object
@@ -44,8 +44,8 @@ app.get('/', (req, res) => {
 const customersController = require('./controllers/customers')
 app.use('/customers', customersController)
 
-const invoicesController = require('./controllers/invoices')
-app.use('/invoices', invoicesController)
+// const invoicesController = require('./controllers/invoices')
+// app.use('/invoices', invoicesController)
 
 
 /////////////////////////////
