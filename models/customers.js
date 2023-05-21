@@ -9,6 +9,6 @@ const customerSchema = new Schema(
     {timestamps: true}
 )
 
-const Spell = mongoose.model('Customer', customerSchema)
+const Customer = mongoose.model('Customer', customerSchema)
 
 module.exports = Customer
