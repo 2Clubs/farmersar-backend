@@ -17,7 +17,7 @@ invoicesRouter.get('/', async (req, res) => {
     }
 })
 // Destroy
-invoicesRouter.delete('/:id' (req, res) => {
+invoicesRouter.delete('/:id', async (req, res) => {
     try {
         res.json(await Invoice.findByIdAndRemove(req.body))
     } catch (error) {
@@ -25,7 +25,7 @@ invoicesRouter.delete('/:id' (req, res) => {
     }
 })
 // Update
-invoicesRouter.put('/:id', async(req, res) => {
+invoicesRouter.put('/:id', async (req, res) => {
     try {
         res.json(await Invoice.findByIdAndUpdate(req.params.id, req.body, { new: true }))
     } catch (error) {
