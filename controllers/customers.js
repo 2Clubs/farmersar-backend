@@ -9,7 +9,7 @@ const Customer = require('../models/customers')
 // ROUTES
 /////////////////////////////
 // Index
-customersRouter('/', async (req, res) => {
+customersRouter.get('/', async (req, res) => {
     try {
         res.json(await Customer.find({}))
     } catch (error) {
@@ -17,7 +17,7 @@ customersRouter('/', async (req, res) => {
     }
 })
 // Create
-customersRouter('/', async (req, res) => {
+customersRouter.post('/', async (req, res) => {
     try {
         res.json(await Customer.create(req.body))
     } catch (error) {
