@@ -51,9 +51,6 @@ app.use('/customers', customersController)
 const invoicesController = require('./controllers/invoices')
 app.use('/invoices', invoicesController)
 
-// const invoicesController = require('./controllers/invoices')
-// app.use('/invoices', invoicesController)
-
 
 /////////////////////////////
 // LISTENER
